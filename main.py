@@ -1,12 +1,14 @@
 import pygame, sys 
+from player import Player
 
 class Game:
     """Class principale du jeu"""
     def __init__(self):
-        pass
+        player_sprite = Player((300,300))
+        self.player = pygame.sprite.GroupSingle(player_sprite)
 
     def run(self):
-        pass
+        self.player.draw(screen)
         # Update all sprite groups
         # draw all sprite groups
 
