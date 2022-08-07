@@ -4,10 +4,11 @@ from player import Player
 class Game:
     """Class principale du jeu"""
     def __init__(self):
-        player_sprite = Player((300,300))
+        player_sprite = Player((screen_with / 2,screen_height), screen_with, 5)
         self.player = pygame.sprite.GroupSingle(player_sprite)
 
     def run(self):
+        self.player.update()
         self.player.draw(screen)
         # Update all sprite groups
         # draw all sprite groups
